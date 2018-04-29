@@ -19,7 +19,7 @@ SHret=pd.read_table('TRD_IndexSum.txt',index_col='Trddt',sep='\t')
 
 SHret.index=pd.to_datetime(SHret.index)
 
-SHret=SHret.sort()
+SHret=SHret.sort_index()
 #绘制收益率平方序列图
 plt.subplot(211)
 plt.plot(SHret**2)

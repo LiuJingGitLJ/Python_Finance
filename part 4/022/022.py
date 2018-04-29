@@ -5,7 +5,7 @@ os.chdir('E:\\book_data\\part 4\\022')
 '''
 
 import pandas as pd
-Index=pd.read_table('TRD_Index.txt',sep='\t',index_col='Trddt')
+Index=pd.read_table('TRD_Index_22.txt',sep='\t',index_col='Trddt')
 SHindex=Index[Index.Indexcd==1]
 #查看前3期数据
 SHindex.head(n=3)

@@ -28,7 +28,7 @@ CPI.shape
 CPItrain=CPI[3:]
 CPItrain.head(n=3)
 #绘制时序图，直观了解数据情况
-CPI.sort().plot(title='CPI 2001-2014')
+CPI.sort_index().plot(title='CPI 2001-2014')
 
 #进行ADF单位根检验，并查看结果；
 CPItrain=CPItrain.dropna().CPI
@@ -83,6 +83,7 @@ returns=Datang.datang['2014-01-01':'2016-01-01']
 returns.head(n=3)
 returns.tail(n=3)
 returns.plot()
+returns.show()
 
 
 ADF(returns).summary()
